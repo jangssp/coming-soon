@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .App-logo {
+            height: 40vmin;
+            pointer-events: none;
+            animation: heartbeat 1s ease-in-out infinite;
+        }
+
+        /* Blinking and heartbeat-like effect for the logo */
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            26% { transform: scale(1.1); }
+            59% { transform: scale(0.6); }
+            75% { 
+                transform: scale(1.1);
+                filter: drop-shadow(0px 0px 100px rgba(191, 255, 0, 0.81)); 
+            }
+            100% { 
+                transform: scale(1);
+                filter: drop-shadow(0px 0px 200px rgb(0, 0, 0)); 
+            }
+        }
+
+        /* Typing animation for "COMING SOON" */
+        .typing {
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 3s steps(30) 1s infinite, blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            50% { border-color: transparent; }
+        }
+
+        .App-header {
+            background-color: rgb(225, 226, 227);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: calc(10px + 2vmin);
+        }
+
+        .medsos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .medsos li {
+            list-style: none;
+        }
+
+        .medsos a {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+        }
+
+        .medsos a img {
+            width: 40px;
+            height: 40px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="App">
+        <header class="App-header">
+            <img src="logo.png" class="App-logo" alt="logo">
+            <p class="typing">COMING SOON 💫</p>
+            <div class="medsos">
+                <li>
+                    <a href="https://www.instagram.com/jangstuuff/">
+                        <img src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" 
+                             alt="Instagram Icon">
+                        @jangstuuff
+                    </a>
+                </li>
+            </div>
+        </header>
+    </div>
+</body>
+</html>
